@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Stubble.Core" Version="1.5.4" />
+      <PackageReference Include="Stubble.Extensions.JsonNet" Version="1.2.3" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Boilerplate.Initializr.Core", "src\AElf.Boilerplate.Initializr.Core\AElf.Boilerplate.Initializr.Core.csproj", "{731DA34A-0CFE-4CAF-934B-1174936C6D91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65D38A92-CBE1-45A7-88D2-9FBECFFC4B66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CFA55B0D-4247-40D1-A9E0-193E72AC06F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Boilerplate.Initializr.Core.Tests", "test\AElf.Boilerplate.Initializr.Core.Tests\AElf.Boilerplate.Initializr.Core.Tests.csproj", "{5C961F24-0BEA-4D56-9740-C1C409C4D3F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{731DA34A-0CFE-4CAF-934B-1174936C6D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731DA34A-0CFE-4CAF-934B-1174936C6D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731DA34A-0CFE-4CAF-934B-1174936C6D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731DA34A-0CFE-4CAF-934B-1174936C6D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C961F24-0BEA-4D56-9740-C1C409C4D3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C961F24-0BEA-4D56-9740-C1C409C4D3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C961F24-0BEA-4D56-9740-C1C409C4D3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C961F24-0BEA-4D56-9740-C1C409C4D3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{731DA34A-0CFE-4CAF-934B-1174936C6D91} = {65D38A92-CBE1-45A7-88D2-9FBECFFC4B66}
+		{5C961F24-0BEA-4D56-9740-C1C409C4D3F4} = {CFA55B0D-4247-40D1-A9E0-193E72AC06F8}
+	EndGlobalSection
+EndGlobal
