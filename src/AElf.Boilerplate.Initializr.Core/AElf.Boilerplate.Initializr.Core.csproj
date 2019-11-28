@@ -10,4 +10,12 @@
       <PackageReference Include="Stubble.Extensions.JsonNet" Version="1.2.3" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="..\..\template\**\*.*" Exclude="..\..\template\**\bin\**;..\..\template\**\obj\**;..\..\template\**\Protobuf\**;">
+            <Link>template\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </None>
+    </ItemGroup>
+
 </Project>
