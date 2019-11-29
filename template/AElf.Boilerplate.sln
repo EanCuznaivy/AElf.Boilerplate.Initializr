@@ -20,9 +20,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Contracts.Deployer", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Boilerplate.Tester", "src\AElf.Boilerplate.Tester\AElf.Boilerplate.Tester.csproj", "{666699C9-0B3D-4CCA-B2C4-6053798BD568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Contracts.{{ReplaceMe}}", "contract\AElf.Contracts.{{ReplaceMe}}\AElf.Contracts.{{ReplaceMe}}.csproj", "{90F23F63-6A0E-4804-B61E-B990F02FBA9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Contracts.{{ContractName}}", "contract\AElf.Contracts.{{ContractName}}\AElf.Contracts.{{ContractName}}.csproj", "{90F23F63-6A0E-4804-B61E-B990F02FBA9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Contracts.{{ReplaceMe}}.Tests", "test\AElf.Contracts.{{ReplaceMe}}.Tests\AElf.Contracts.{{ReplaceMe}}.Tests.csproj", "{37C87BE0-2164-416A-A027-51B23B085C22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Contracts.{{ContractName}}.Tests", "test\AElf.Contracts.{{ContractName}}.Tests\AElf.Contracts.{{ContractName}}.Tests.csproj", "{37C87BE0-2164-416A-A027-51B23B085C22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

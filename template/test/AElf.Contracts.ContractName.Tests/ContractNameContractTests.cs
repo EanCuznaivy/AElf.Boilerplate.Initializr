@@ -5,14 +5,14 @@ using Google.Protobuf.WellKnownTypes;
 using Shouldly;
 using Xunit;
 
-namespace AElf.Contracts.HelloWorld
+namespace AElf.Contracts.{{ContractName}}
 {
-    public class HelloWorldContractTests : HelloWorldContractTestBase
+    public class {{ContractName}}ContractTests : {{ContractName}}ContractTestBase
     {
         [Fact]
         public async Task GreetTest()
         {
-            var txResult = await HelloWorldContractStub.Greet.SendAsync(new Empty());
+            var txResult = await {{ContractName}}ContractStub.Greet.SendAsync(new Empty());
             txResult.TransactionResult.Status.ShouldBe(TransactionResultStatus.Mined);
             var text = new StringValue();
             text.MergeFrom(txResult.TransactionResult.ReturnValue);
@@ -24,7 +24,7 @@ namespace AElf.Contracts.HelloWorld
         [InlineData("Sam")]
         public async Task GreetToTests(string name)
         {
-            var txResult = await HelloWorldContractStub.GreetTo.SendAsync(new StringValue {Value = name});
+            var txResult = await {{ContractName}}ContractStub.GreetTo.SendAsync(new StringValue {Value = name});
             txResult.TransactionResult.Status.ShouldBe(TransactionResultStatus.Mined);
             var output = new GreetToOutput();
             output.MergeFrom(txResult.TransactionResult.ReturnValue);
@@ -37,7 +37,7 @@ namespace AElf.Contracts.HelloWorld
         [InlineData(" ")]
         public async Task GreetToWithEmptyStringOrWhiteSpace(string name)
         {
-            var txResult = await HelloWorldContractStub.GreetTo.SendWithExceptionAsync(new StringValue {Value = name});
+            var txResult = await {{ContractName}}ContractStub.GreetTo.SendWithExceptionAsync(new StringValue {Value = name});
             txResult.TransactionResult.Status.ShouldBe(TransactionResultStatus.Failed);
             txResult.TransactionResult.Error.ShouldContain("Invalid name.");
         }
@@ -48,7 +48,7 @@ namespace AElf.Contracts.HelloWorld
             await GreetToTests("Ean");
             await GreetToTests("Sam");
 
-            var greetedList = await HelloWorldContractStub.GetGreetedList.CallAsync(new Empty());
+            var greetedList = await {{ContractName}}ContractStub.GetGreetedList.CallAsync(new Empty());
             greetedList.Value.Count.ShouldBe(2);
             greetedList.Value.ShouldContain("Ean");
             greetedList.Value.ShouldContain("Sam");
@@ -62,7 +62,7 @@ namespace AElf.Contracts.HelloWorld
             // Dup the name
             await GreetToTests(name);
 
-            var greetedList = await HelloWorldContractStub.GetGreetedList.CallAsync(new Empty());
+            var greetedList = await {{ContractName}}ContractStub.GetGreetedList.CallAsync(new Empty());
             greetedList.Value.Count.ShouldBe(1);
             greetedList.Value.ShouldContain("Ean");
         }

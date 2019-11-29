@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
-        <RootNamespace>AElf.Contracts.HelloWorld</RootNamespace>
+        <RootNamespace>AElf.Contracts.{{ContractName}}</RootNamespace>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
@@ -23,13 +23,13 @@
         <ContractStub Include="..\..\protobuf\acs0.proto">
             <Link>Protobuf\Proto\acs0.proto</Link>
         </ContractStub>
-        <ContractStub Include="..\..\protobuf\hello_world_contract.proto">
-            <Link>Protobuf\Proto\hello_world_contract.proto</Link>
+        <ContractStub Include="..\..\protobuf\{{ProtoFileName}}.proto">
+            <Link>Protobuf\Proto\{{ProtoFileName}}.proto</Link>
         </ContractStub>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\contract\AElf.Contracts.HelloWorld\AElf.Contracts.HelloWorld.csproj" />
+        <ProjectReference Include="..\..\contract\AElf.Contracts.{{ContractName}}\AElf.Contracts.{{ContractName}}.csproj" />
     </ItemGroup>
 
 </Project>

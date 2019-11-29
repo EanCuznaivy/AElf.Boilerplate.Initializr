@@ -2,14 +2,14 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>AElf.Contracts.{{ReplaceMe}}</RootNamespace>
+        <RootNamespace>AElf.Contracts.{{ContractName}}</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IsContract>true</IsContract>
     </PropertyGroup>
 
     <ItemGroup>
-        <ContractCode Include="..\..\protobuf\hello_world_contract.proto">
-            <Link>Protobuf\Proto\hello_world_contract.proto</Link>
+        <ContractCode Include="..\..\protobuf\{{ProtoFileName}}.proto">
+            <Link>Protobuf\Proto\{{ProtoFileName}}.proto</Link>
         </ContractCode>
     </ItemGroup>
 

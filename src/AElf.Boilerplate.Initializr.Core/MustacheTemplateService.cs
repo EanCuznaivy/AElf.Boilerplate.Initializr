@@ -20,8 +20,6 @@ namespace AElf.Boilerplate.Initializr.Core
             _stubble = new StubbleBuilder()
                 .Configure(settings => settings.AddJsonNet())
                 .Build();
-
-            var templatePath = AppDomain.CurrentDomain.BaseDirectory + "template";
         }
 
         public async Task<byte[]> GenerateProjectArchiveAsync(ContractInformation information)
@@ -57,20 +55,23 @@ namespace AElf.Boilerplate.Initializr.Core
         {
             var fileList = new List<KeyValuePair<string, string>>();
 
+            if (information.ContractName == null)
+            {
+                throw new InvalidDataException(nameof(information));
+            }
+
+            var view = new Dictionary<string, string>
+            {
+                {"ContractName", information.ContractName},
+                {"ContractNameSpace", information.ContractNameSpace},
+            };
+
             foreach (var sourceFile in GetUsefulSourceFiles())
             {
-                if (sourceFile.Name.EndsWith(".csproj"))
-                {
-                    var fileName =
-                        sourceFile.Name.Replace("ContractName", information.ContractName ?? "ContractExample");
-                    var output = _stubble.Render(sourceFile.Name, sourceFile.Text);
-                    fileList.Add(new KeyValuePair<string, string>(fileName, output));
-                }
-                else
-                {
-                    var output = _stubble.Render(sourceFile.Name, sourceFile.Text);
-                    fileList.Add(new KeyValuePair<string, string>(sourceFile.Name, output));
-                }
+                var fileName =
+                    sourceFile.Name.Replace("ContractName", information.ContractName);
+                var output = _stubble.Render(sourceFile.Text, view);
+                fileList.Add(new KeyValuePair<string, string>(fileName, output));
             }
 
             return Task.FromResult(fileList);

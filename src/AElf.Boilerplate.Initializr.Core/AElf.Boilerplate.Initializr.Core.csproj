@@ -6,12 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.11.0-rc2" />
       <PackageReference Include="Stubble.Core" Version="1.5.4" />
       <PackageReference Include="Stubble.Extensions.JsonNet" Version="1.2.3" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\..\template\**\*.*" Exclude="..\..\template\**\bin\**;..\..\template\**\obj\**;..\..\template\**\Protobuf\**;">
+        <None Include="..\..\template\**\*.*" Exclude="..\..\template\**\bin\**;..\..\template\**\obj\**;">
             <Link>template\%(RecursiveDir)%(Filename)%(Extension)</Link>
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
             <CopyToPublishDirectory>Always</CopyToPublishDirectory>
